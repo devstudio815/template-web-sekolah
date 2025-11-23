@@ -2,26 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Primary - Hijau Sekolah */
+    --primary: 142 76% 36%; /* #2d8659 - Hijau tua sekolah */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Hijau Muda */
+    --secondary: 142 50% 92%; /* #e5f5ed - Hijau muda lembut */
+    --secondary-foreground: 142 76% 20%;
+
+    /* Accent - Biru Akademik */
+    --accent: 210 100% 45%; /* #0066e6 - Biru sekolah */
+    --accent-foreground: 0 0% 100%;
+
+    /* Background */
+    --background: 0 0% 100%; /* White */
+    --foreground: 222 47% 11%; /* #0f172a - Text gelap */
+
+    /* Muted - Abu untuk section */
+    --muted: 210 40% 96%; /* #f1f5f9 */
+    --muted-foreground: 215 16% 47%;
+
+    /* Border */
+    --border: 214 32% 91%; /* #e2e8f0 */
+    --input: 214 32% 91%;
+    --ring: 142 76% 36%; /* Match primary */
+
+    /* Card */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    /* Success, Warning, Error */
+    --success: 142 76% 36%; /* Hijau */
+    --warning: 38 92% 50%; /* Kuning/Orange */
+    --error: 0 84% 60%; /* Merah */
+
+    /* Radius */
+    --radius: 0.5rem;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
