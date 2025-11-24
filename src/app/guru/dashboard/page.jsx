@@ -1,19 +1,12 @@
 "use client";
 import { DataSidebarGuru } from "@/data/SidebarGuru";
+import { DashboardGuru } from "@/features/guru/DashboardGuru";
 import { Sidebar } from "@/layouts/Sidebar";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-export default function App() {
+export default function Page() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  return (
-    <div className="flex min-h-screen bg-gray-50">
-      {/* Sidebar */}
-      <Sidebar
-        data={DataSidebarGuru}
-        isOpen={isSidebarOpen}
-        setIsOpen={setIsSidebarOpen}
-      />
-    </div>
-  );
+  return <DashboardGuru />;
 }

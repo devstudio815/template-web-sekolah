@@ -1,327 +1,10 @@
-// mockdata/jadwalGuru.js
-
-export const JadwalGuru = [
-  {
-    id: 1,
-    namaGuru: "Budi Santoso, S.Pd",
-    nip: "198501152010011003",
-    mataPelajaran: "Matematika",
-    foto: "https://i.pravatar.cc/150?img=12",
-    jadwal: [
-      {
-        hari: "Senin",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "X RPL 1",
-            ruangan: "R.101",
-            materi: "Aljabar Linear",
-          },
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "XI RPL 2",
-            ruangan: "R.102",
-            materi: "Kalkulus",
-          },
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "XII RPL 1",
-            ruangan: "R.103",
-            materi: "Statistika",
-          },
-        ],
-      },
-      {
-        hari: "Selasa",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "X RPL 2",
-            ruangan: "R.101",
-            materi: "Trigonometri",
-          },
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "XI RPL 1",
-            ruangan: "R.104",
-            materi: "Geometri",
-          },
-        ],
-      },
-      {
-        hari: "Rabu",
-        sesi: [
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "X RPL 1",
-            ruangan: "R.101",
-            materi: "Fungsi",
-          },
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "XII RPL 2",
-            ruangan: "R.105",
-            materi: "Probabilitas",
-          },
-        ],
-      },
-      {
-        hari: "Kamis",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "XI RPL 2",
-            ruangan: "R.102",
-            materi: "Matriks",
-          },
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "X RPL 2",
-            ruangan: "R.101",
-            materi: "Logika",
-          },
-        ],
-      },
-      {
-        hari: "Jumat",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "XII RPL 1",
-            ruangan: "R.103",
-            materi: "Ujian Tengah Semester",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
-    namaGuru: "Siti Aminah, S.Kom",
-    nip: "199002202015012004",
-    mataPelajaran: "Pemrograman Web",
-    foto: "https://i.pravatar.cc/150?img=5",
-    jadwal: [
-      {
-        hari: "Senin",
-        sesi: [
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "XI RPL 1",
-            ruangan: "Lab.1",
-            materi: "HTML & CSS",
-          },
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "XII RPL 2",
-            ruangan: "Lab.2",
-            materi: "React.js",
-          },
-        ],
-      },
-      {
-        hari: "Selasa",
-        sesi: [
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "X RPL 1",
-            ruangan: "Lab.1",
-            materi: "Dasar Web",
-          },
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "XI RPL 2",
-            ruangan: "Lab.2",
-            materi: "JavaScript",
-          },
-        ],
-      },
-      {
-        hari: "Rabu",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "XII RPL 1",
-            ruangan: "Lab.1",
-            materi: "Next.js",
-          },
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "X RPL 2",
-            ruangan: "Lab.2",
-            materi: "Bootstrap",
-          },
-        ],
-      },
-      {
-        hari: "Kamis",
-        sesi: [
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "XI RPL 1",
-            ruangan: "Lab.1",
-            materi: "Tailwind CSS",
-          },
-        ],
-      },
-      {
-        hari: "Jumat",
-        sesi: [
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "XII RPL 2",
-            ruangan: "Lab.2",
-            materi: "Project Akhir",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 3,
-    namaGuru: "Ahmad Fauzi, S.T",
-    nip: "198705102012011002",
-    mataPelajaran: "Basis Data",
-    foto: "https://i.pravatar.cc/150?img=33",
-    jadwal: [
-      {
-        hari: "Senin",
-        sesi: [
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "XI RPL 1",
-            ruangan: "Lab.3",
-            materi: "SQL Dasar",
-          },
-        ],
-      },
-      {
-        hari: "Selasa",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "XII RPL 1",
-            ruangan: "Lab.3",
-            materi: "Normalisasi",
-          },
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "XI RPL 2",
-            ruangan: "Lab.3",
-            materi: "ERD",
-          },
-        ],
-      },
-      {
-        hari: "Rabu",
-        sesi: [
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "X RPL 1",
-            ruangan: "Lab.3",
-            materi: "Pengenalan Database",
-          },
-        ],
-      },
-      {
-        hari: "Kamis",
-        sesi: [
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "XII RPL 2",
-            ruangan: "Lab.3",
-            materi: "Stored Procedure",
-          },
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "X RPL 2",
-            ruangan: "Lab.3",
-            materi: "MySQL",
-          },
-        ],
-      },
-      {
-        hari: "Jumat",
-        sesi: [],
-      },
-    ],
-  },
-  {
-    id: 4,
-    namaGuru: "Rina Wulandari, S.Pd",
-    nip: "199208152016012003",
-    mataPelajaran: "Bahasa Inggris",
-    foto: "https://i.pravatar.cc/150?img=9",
-    jadwal: [
-      {
-        hari: "Senin",
-        sesi: [
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "X RPL 1",
-            ruangan: "R.201",
-            materi: "Grammar",
-          },
-        ],
-      },
-      {
-        hari: "Selasa",
-        sesi: [
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "XI RPL 1",
-            ruangan: "R.201",
-            materi: "Reading Comprehension",
-          },
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "XII RPL 1",
-            ruangan: "R.202",
-            materi: "Business English",
-          },
-        ],
-      },
-      {
-        hari: "Rabu",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "X RPL 2",
-            ruangan: "R.201",
-            materi: "Vocabulary",
-          },
-        ],
-      },
-      {
-        hari: "Kamis",
-        sesi: [
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "XI RPL 2",
-            ruangan: "R.201",
-            materi: "Speaking Practice",
-          },
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "XII RPL 2",
-            ruangan: "R.202",
-            materi: "TOEFL Preparation",
-          },
-        ],
-      },
-      {
-        hari: "Jumat",
-        sesi: [],
-      },
-    ],
-  },
-];
-
 export const jadwalMapelGuru = [
   {
     mapel: "Matematika",
     kelas: "10 MIA 1",
+    jam: "08:00 - 09:00",
     hari: "Senin",
+    ruangan: "R.301",
     jumlahSiswa: {
       laki_laki: 16,
       perempuan: 14,
@@ -331,5 +14,226 @@ export const jadwalMapelGuru = [
       sakit: 5,
       hadir: 20,
     },
+  },
+  {
+    mapel: "Matematika",
+    kelas: "10 MIA 2",
+    jam: "09:00 - 10:00",
+    hari: "Senin",
+    ruangan: "R.302",
+    jumlahSiswa: {
+      laki_laki: 15,
+      perempuan: 17,
+    },
+    kehadiran: {
+      izin: 2,
+      sakit: 1,
+      hadir: 29,
+    },
+  },
+  {
+    mapel: "Matematika",
+    kelas: "11 MIA 1",
+    jam: "10:15 - 11:15",
+    hari: "Selasa",
+    ruangan: "R.301",
+    jumlahSiswa: {
+      laki_laki: 14,
+      perempuan: 16,
+    },
+    kehadiran: {
+      izin: 3,
+      sakit: 2,
+      hadir: 25,
+    },
+  },
+  {
+    mapel: "Matematika",
+    kelas: "11 MIA 2",
+    jam: "13:00 - 14:00",
+    hari: "Rabu",
+    ruangan: "R.303",
+    jumlahSiswa: {
+      laki_laki: 18,
+      perempuan: 14,
+    },
+    kehadiran: {
+      izin: 4,
+      sakit: 3,
+      hadir: 25,
+    },
+  },
+  {
+    mapel: "Matematika",
+    kelas: "10 MIA 1",
+    jam: "08:00 - 09:00",
+    hari: "Kamis",
+    ruangan: "R.301",
+    jumlahSiswa: {
+      laki_laki: 16,
+      perempuan: 14,
+    },
+    kehadiran: {
+      izin: 1,
+      sakit: 2,
+      hadir: 27,
+    },
+  },
+  {
+    mapel: "Matematika",
+    kelas: "12 MIA 1",
+    jam: "09:00 - 10:00",
+    hari: "Jumat",
+    ruangan: "R.304",
+    jumlahSiswa: {
+      laki_laki: 13,
+      perempuan: 15,
+    },
+    kehadiran: {
+      izin: 2,
+      sakit: 1,
+      hadir: 25,
+    },
+  },
+];
+
+export const dataStatistikGuru = {
+  jumlahKelasYangDitempuh: 4,
+  jumlahSiswa: 120,
+  jumlahMateri: 28,
+  jumlahTugas: 15,
+  tugasSelesai: 12,
+  rataRataNilai: 85.5,
+  kehadiranSiswa: 92,
+};
+
+// Data untuk chart
+export const nilaiPerKelas = [
+  { kelas: "X-A", rata: 88, siswa: 30 },
+  { kelas: "X-B", rata: 82, siswa: 28 },
+  { kelas: "XI-A", rata: 85, siswa: 32 },
+  { kelas: "XI-B", rata: 87, siswa: 30 },
+];
+export const hariUrutan = [
+  "Senin",
+  "Selasa",
+  "Rabu",
+  "Kamis",
+  "Jumat",
+  "Sabtu",
+];
+
+export const materiPerBulan = [
+  { bulan: "Agu", materi: 4, tugas: 2 },
+  { bulan: "Sep", materi: 6, tugas: 3 },
+  { bulan: "Okt", materi: 8, tugas: 4 },
+  { bulan: "Nov", materi: 10, tugas: 6 },
+];
+
+export const statusTugas = [
+  { name: "Selesai", value: 12, color: "#10b981" },
+  { name: "Pending", value: 3, color: "#f59e0b" },
+];
+
+export const kehadiranData = [
+  { hari: "Sen", hadir: 28, tidak: 2 },
+  { hari: "Sel", hadir: 29, tidak: 1 },
+  { hari: "Rab", hadir: 27, tidak: 3 },
+  { hari: "Kam", hadir: 30, tidak: 0 },
+  { hari: "Jum", hadir: 28, tidak: 2 },
+];
+
+export const mataPelajaran = [
+  {
+    nama: "Matematika",
+    kelas: "10 MIA 1",
+    kkm: 75,
+    totalBab: 12,
+    babSelesai: 8,
+    babPertemuanSelanjutnya: "Bab 9: Trigonometri",
+    totalSiswa: 30,
+    rataRataNilai: 82.5,
+    tugas: [
+      {
+        status: "Pending",
+        nama: "Tugas Fungsi Kuadrat",
+        kelas: "10 MIA 1",
+        deadline: "2024-11-30",
+        submitted: 15,
+        total: 30,
+      },
+      {
+        status: "Success",
+        nama: "Ulangan Harian - Limit",
+        kelas: "10 MIA 1",
+        nilai: 85,
+        submitted: 30,
+        total: 30,
+      },
+      {
+        status: "Pending",
+        nama: "PR Matriks",
+        kelas: "10 MIA 1",
+        deadline: "2024-11-28",
+        submitted: 22,
+        total: 30,
+      },
+    ],
+  },
+  {
+    nama: "Matematika",
+    kelas: "10 MIA 2",
+    kkm: 75,
+    totalBab: 12,
+    babSelesai: 7,
+    babPertemuanSelanjutnya: "Bab 8: Persamaan Lingkaran",
+    totalSiswa: 32,
+    rataRataNilai: 78.3,
+    tugas: [
+      {
+        status: "Pending",
+        nama: "Tugas Vektor",
+        kelas: "10 MIA 2",
+        deadline: "2024-11-29",
+        submitted: 18,
+        total: 32,
+      },
+      {
+        status: "Success",
+        nama: "Quiz Aljabar",
+        kelas: "10 MIA 2",
+        nilai: 80,
+        submitted: 32,
+        total: 32,
+      },
+    ],
+  },
+  {
+    nama: "Matematika",
+    kelas: "11 MIA 1",
+    kkm: 75,
+    totalBab: 10,
+    babSelesai: 6,
+    babPertemuanSelanjutnya: "Bab 7: Integral",
+    totalSiswa: 28,
+    rataRataNilai: 88.7,
+    tugas: [
+      {
+        status: "Success",
+        nama: "Ulangan Tengah Semester",
+        kelas: "11 MIA 1",
+        nilai: 90,
+        submitted: 28,
+        total: 28,
+      },
+      {
+        status: "Pending",
+        nama: "Tugas Diferensial",
+        kelas: "11 MIA 1",
+        deadline: "2024-12-01",
+        submitted: 20,
+        total: 28,
+      },
+    ],
   },
 ];
