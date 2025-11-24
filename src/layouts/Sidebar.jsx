@@ -1,4 +1,4 @@
-import { iconMap } from "@/data/SidebarGuru";
+import { iconMap } from "@/data/Sidebar";
 import { X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

@@ -6,13 +6,13 @@ export const jadwalMapelGuru = [
     hari: "Senin",
     ruangan: "R.301",
     jumlahSiswa: {
-      laki_laki: 16,
-      perempuan: 14,
+      laki_laki: 6,
+      perempuan: 4,
     },
     kehadiran: {
-      izin: 5,
-      sakit: 5,
-      hadir: 20,
+      izin: 1,
+      sakit: 1,
+      hadir: 8,
     },
   },
   {
@@ -22,13 +22,13 @@ export const jadwalMapelGuru = [
     hari: "Senin",
     ruangan: "R.302",
     jumlahSiswa: {
-      laki_laki: 15,
-      perempuan: 17,
+      laki_laki: 5,
+      perempuan: 5,
     },
     kehadiran: {
-      izin: 2,
+      izin: 0,
       sakit: 1,
-      hadir: 29,
+      hadir: 9,
     },
   },
   {
@@ -38,13 +38,13 @@ export const jadwalMapelGuru = [
     hari: "Selasa",
     ruangan: "R.301",
     jumlahSiswa: {
-      laki_laki: 14,
-      perempuan: 16,
+      laki_laki: 4,
+      perempuan: 4,
     },
     kehadiran: {
-      izin: 3,
-      sakit: 2,
-      hadir: 25,
+      izin: 1,
+      sakit: 0,
+      hadir: 7,
     },
   },
   {
@@ -54,13 +54,13 @@ export const jadwalMapelGuru = [
     hari: "Rabu",
     ruangan: "R.303",
     jumlahSiswa: {
-      laki_laki: 18,
-      perempuan: 14,
+      laki_laki: 6,
+      perempuan: 4,
     },
     kehadiran: {
-      izin: 4,
-      sakit: 3,
-      hadir: 25,
+      izin: 1,
+      sakit: 1,
+      hadir: 8,
     },
   },
   {
@@ -70,13 +70,13 @@ export const jadwalMapelGuru = [
     hari: "Kamis",
     ruangan: "R.301",
     jumlahSiswa: {
-      laki_laki: 16,
-      perempuan: 14,
+      laki_laki: 6,
+      perempuan: 4,
     },
     kehadiran: {
-      izin: 1,
-      sakit: 2,
-      hadir: 27,
+      izin: 0,
+      sakit: 1,
+      hadir: 9,
     },
   },
   {
@@ -86,20 +86,20 @@ export const jadwalMapelGuru = [
     hari: "Jumat",
     ruangan: "R.304",
     jumlahSiswa: {
-      laki_laki: 13,
-      perempuan: 15,
+      laki_laki: 5,
+      perempuan: 5,
     },
     kehadiran: {
-      izin: 2,
-      sakit: 1,
-      hadir: 25,
+      izin: 1,
+      sakit: 0,
+      hadir: 9,
     },
   },
 ];
 
 export const dataStatistikGuru = {
-  jumlahKelasYangDitempuh: 4,
-  jumlahSiswa: 120,
+  jumlahKelasYangDitempuh: 5,
+  jumlahSiswa: 48,
   jumlahMateri: 28,
   jumlahTugas: 15,
   tugasSelesai: 12,
@@ -109,11 +109,13 @@ export const dataStatistikGuru = {
 
 // Data untuk chart
 export const nilaiPerKelas = [
-  { kelas: "X-A", rata: 88, siswa: 30 },
-  { kelas: "X-B", rata: 82, siswa: 28 },
-  { kelas: "XI-A", rata: 85, siswa: 32 },
-  { kelas: "XI-B", rata: 87, siswa: 30 },
+  { kelas: "10 MIA 1", rata: 88, siswa: 10 },
+  { kelas: "10 MIA 2", rata: 82, siswa: 10 },
+  { kelas: "11 MIA 1", rata: 85, siswa: 8 },
+  { kelas: "11 MIA 2", rata: 87, siswa: 10 },
+  { kelas: "12 MIA 1", rata: 90, siswa: 10 },
 ];
+
 export const hariUrutan = [
   "Senin",
   "Selasa",
@@ -136,11 +138,11 @@ export const statusTugas = [
 ];
 
 export const kehadiranData = [
-  { hari: "Sen", hadir: 28, tidak: 2 },
-  { hari: "Sel", hadir: 29, tidak: 1 },
-  { hari: "Rab", hadir: 27, tidak: 3 },
-  { hari: "Kam", hadir: 30, tidak: 0 },
-  { hari: "Jum", hadir: 28, tidak: 2 },
+  { hari: "Sen", hadir: 9, tidak: 1 },
+  { hari: "Sel", hadir: 7, tidak: 1 },
+  { hari: "Rab", hadir: 8, tidak: 2 },
+  { hari: "Kam", hadir: 9, tidak: 1 },
+  { hari: "Jum", hadir: 9, tidak: 1 },
 ];
 
 export const mataPelajaran = [
@@ -151,7 +153,7 @@ export const mataPelajaran = [
     totalBab: 12,
     babSelesai: 8,
     babPertemuanSelanjutnya: "Bab 9: Trigonometri",
-    totalSiswa: 30,
+    totalSiswa: 10,
     rataRataNilai: 82.5,
     tugas: [
       {
@@ -159,24 +161,24 @@ export const mataPelajaran = [
         nama: "Tugas Fungsi Kuadrat",
         kelas: "10 MIA 1",
         deadline: "2024-11-30",
-        submitted: 15,
-        total: 30,
+        submitted: 6,
+        total: 10,
       },
       {
         status: "Success",
         nama: "Ulangan Harian - Limit",
         kelas: "10 MIA 1",
         nilai: 85,
-        submitted: 30,
-        total: 30,
+        submitted: 10,
+        total: 10,
       },
       {
         status: "Pending",
         nama: "PR Matriks",
         kelas: "10 MIA 1",
         deadline: "2024-11-28",
-        submitted: 22,
-        total: 30,
+        submitted: 7,
+        total: 10,
       },
     ],
   },
@@ -187,7 +189,7 @@ export const mataPelajaran = [
     totalBab: 12,
     babSelesai: 7,
     babPertemuanSelanjutnya: "Bab 8: Persamaan Lingkaran",
-    totalSiswa: 32,
+    totalSiswa: 10,
     rataRataNilai: 78.3,
     tugas: [
       {
@@ -195,16 +197,16 @@ export const mataPelajaran = [
         nama: "Tugas Vektor",
         kelas: "10 MIA 2",
         deadline: "2024-11-29",
-        submitted: 18,
-        total: 32,
+        submitted: 6,
+        total: 10,
       },
       {
         status: "Success",
         nama: "Quiz Aljabar",
         kelas: "10 MIA 2",
         nilai: 80,
-        submitted: 32,
-        total: 32,
+        submitted: 10,
+        total: 10,
       },
     ],
   },
@@ -215,7 +217,7 @@ export const mataPelajaran = [
     totalBab: 10,
     babSelesai: 6,
     babPertemuanSelanjutnya: "Bab 7: Integral",
-    totalSiswa: 28,
+    totalSiswa: 8,
     rataRataNilai: 88.7,
     tugas: [
       {
@@ -223,17 +225,133 @@ export const mataPelajaran = [
         nama: "Ulangan Tengah Semester",
         kelas: "11 MIA 1",
         nilai: 90,
-        submitted: 28,
-        total: 28,
+        submitted: 8,
+        total: 8,
       },
       {
         status: "Pending",
         nama: "Tugas Diferensial",
         kelas: "11 MIA 1",
         deadline: "2024-12-01",
-        submitted: 20,
-        total: 28,
+        submitted: 5,
+        total: 8,
       },
     ],
   },
+  {
+    nama: "Matematika",
+    kelas: "11 MIA 2",
+    kkm: 75,
+    totalBab: 10,
+    babSelesai: 6,
+    babPertemuanSelanjutnya: "Bab 7: Turunan Fungsi",
+    totalSiswa: 10,
+    rataRataNilai: 87.0,
+    tugas: [
+      {
+        status: "Pending",
+        nama: "Tugas Limit",
+        kelas: "11 MIA 2",
+        deadline: "2024-11-27",
+        submitted: 8,
+        total: 10,
+      },
+      {
+        status: "Success",
+        nama: "Quiz Turunan",
+        kelas: "11 MIA 2",
+        nilai: 87,
+        submitted: 10,
+        total: 10,
+      },
+    ],
+  },
+  {
+    nama: "Matematika",
+    kelas: "12 MIA 1",
+    kkm: 75,
+    totalBab: 8,
+    babSelesai: 5,
+    babPertemuanSelanjutnya: "Bab 6: Statistika Lanjut",
+    totalSiswa: 10,
+    rataRataNilai: 90.0,
+    tugas: [
+      {
+        status: "Success",
+        nama: "Ulangan Akhir Semester",
+        kelas: "12 MIA 1",
+        nilai: 92,
+        submitted: 10,
+        total: 10,
+      },
+      {
+        status: "Pending",
+        nama: "Tugas Persiapan UTBK",
+        kelas: "12 MIA 1",
+        deadline: "2024-12-05",
+        submitted: 7,
+        total: 10,
+      },
+    ],
+  },
+];
+
+export const dataSiswaBuGuru = [
+  // Kelas 10 MIA 1
+  { nama: "Ahmad Fauzi", kelas: "10 MIA 1", nilai: 85, gender: "L" },
+  { nama: "Siti Nurhaliza", kelas: "10 MIA 1", nilai: 88, gender: "P" },
+  { nama: "Budi Santoso", kelas: "10 MIA 1", nilai: 82, gender: "L" },
+  { nama: "Dewi Lestari", kelas: "10 MIA 1", nilai: 90, gender: "P" },
+  { nama: "Rizki Ramadan", kelas: "10 MIA 1", nilai: 78, gender: "L" },
+  { nama: "Putri Ayu", kelas: "10 MIA 1", nilai: 86, gender: "P" },
+  { nama: "Fajar Nugroho", kelas: "10 MIA 1", nilai: 83, gender: "L" },
+  { nama: "Nur Azizah", kelas: "10 MIA 1", nilai: 89, gender: "P" },
+  { nama: "Andi Wijaya", kelas: "10 MIA 1", nilai: 81, gender: "L" },
+  { nama: "Maya Sari", kelas: "10 MIA 1", nilai: 87, gender: "P" },
+
+  // Kelas 10 MIA 2
+  { nama: "Dimas Prakoso", kelas: "10 MIA 2", nilai: 80, gender: "L" },
+  { nama: "Rina Wati", kelas: "10 MIA 2", nilai: 82, gender: "P" },
+  { nama: "Hendra Gunawan", kelas: "10 MIA 2", nilai: 75, gender: "L" },
+  { nama: "Fitri Handayani", kelas: "10 MIA 2", nilai: 84, gender: "P" },
+  { nama: "Agus Setiawan", kelas: "10 MIA 2", nilai: 78, gender: "L" },
+  { nama: "Linda Permata", kelas: "10 MIA 2", nilai: 81, gender: "P" },
+  { nama: "Taufik Hidayat", kelas: "10 MIA 2", nilai: 79, gender: "L" },
+  { nama: "Sari Rahayu", kelas: "10 MIA 2", nilai: 83, gender: "P" },
+  { nama: "Yudi Pratama", kelas: "10 MIA 2", nilai: 76, gender: "L" },
+  { nama: "Anisa Rahma", kelas: "10 MIA 2", nilai: 85, gender: "P" },
+
+  // Kelas 11 MIA 1
+  { nama: "Reza Maulana", kelas: "11 MIA 1", nilai: 90, gender: "L" },
+  { nama: "Intan Permatasari", kelas: "11 MIA 1", nilai: 92, gender: "P" },
+  { nama: "Arief Budiman", kelas: "11 MIA 1", nilai: 88, gender: "L" },
+  { nama: "Diah Ayu", kelas: "11 MIA 1", nilai: 91, gender: "P" },
+  { nama: "Fikri Rahman", kelas: "11 MIA 1", nilai: 86, gender: "L" },
+  { nama: "Laila Sari", kelas: "11 MIA 1", nilai: 89, gender: "P" },
+  { nama: "Bayu Aji", kelas: "11 MIA 1", nilai: 87, gender: "L" },
+  { nama: "Ratna Dewi", kelas: "11 MIA 1", nilai: 90, gender: "P" },
+
+  // Kelas 11 MIA 2
+  { nama: "Irfan Hakim", kelas: "11 MIA 2", nilai: 86, gender: "L" },
+  { nama: "Zahra Amalia", kelas: "11 MIA 2", nilai: 88, gender: "P" },
+  { nama: "Arman Maulana", kelas: "11 MIA 2", nilai: 85, gender: "L" },
+  { nama: "Novi Andriani", kelas: "11 MIA 2", nilai: 89, gender: "P" },
+  { nama: "Galih Pratama", kelas: "11 MIA 2", nilai: 84, gender: "L" },
+  { nama: "Mega Putri", kelas: "11 MIA 2", nilai: 90, gender: "P" },
+  { nama: "Doni Saputra", kelas: "11 MIA 2", nilai: 87, gender: "L" },
+  { nama: "Anggun Safitri", kelas: "11 MIA 2", nilai: 88, gender: "P" },
+  { nama: "Ryan Hidayat", kelas: "11 MIA 2", nilai: 86, gender: "L" },
+  { nama: "Tia Lestari", kelas: "11 MIA 2", nilai: 87, gender: "P" },
+
+  // Kelas 12 MIA 1
+  { nama: "Farhan Ramadhan", kelas: "12 MIA 1", nilai: 92, gender: "L" },
+  { nama: "Cahaya Putri", kelas: "12 MIA 1", nilai: 94, gender: "P" },
+  { nama: "Ilham Nugraha", kelas: "12 MIA 1", nilai: 90, gender: "L" },
+  { nama: "Nabila Azzahra", kelas: "12 MIA 1", nilai: 93, gender: "P" },
+  { nama: "Rafi Ahmad", kelas: "12 MIA 1", nilai: 89, gender: "L" },
+  { nama: "Salma Khairunnisa", kelas: "12 MIA 1", nilai: 91, gender: "P" },
+  { nama: "Faisal Akbar", kelas: "12 MIA 1", nilai: 88, gender: "L" },
+  { nama: "Diana Puspita", kelas: "12 MIA 1", nilai: 92, gender: "P" },
+  { nama: "Aditya Pratama", kelas: "12 MIA 1", nilai: 87, gender: "L" },
+  { nama: "Aulia Rahman", kelas: "12 MIA 1", nilai: 94, gender: "P" },
 ];

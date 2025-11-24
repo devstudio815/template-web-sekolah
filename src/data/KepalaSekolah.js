@@ -1,316 +1,140 @@
-export const JadwalGuru = [
+export const dataGuru = [
   {
     id: 1,
-    namaGuru: "Budi Santoso, S.Pd",
-    nip: "198501152010011003",
-    mataPelajaran: "Matematika",
-    foto: "https://i.pravatar.cc/150?img=12",
-    jadwal: [
-      {
-        hari: "Senin",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "X RPL 1",
-            ruangan: "R.101",
-            materi: "Aljabar Linear",
-          },
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "XI RPL 2",
-            ruangan: "R.102",
-            materi: "Kalkulus",
-          },
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "XII RPL 1",
-            ruangan: "R.103",
-            materi: "Statistika",
-          },
-        ],
-      },
-      {
-        hari: "Selasa",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "X RPL 2",
-            ruangan: "R.101",
-            materi: "Trigonometri",
-          },
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "XI RPL 1",
-            ruangan: "R.104",
-            materi: "Geometri",
-          },
-        ],
-      },
-      {
-        hari: "Rabu",
-        sesi: [
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "X RPL 1",
-            ruangan: "R.101",
-            materi: "Fungsi",
-          },
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "XII RPL 2",
-            ruangan: "R.105",
-            materi: "Probabilitas",
-          },
-        ],
-      },
-      {
-        hari: "Kamis",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "XI RPL 2",
-            ruangan: "R.102",
-            materi: "Matriks",
-          },
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "X RPL 2",
-            ruangan: "R.101",
-            materi: "Logika",
-          },
-        ],
-      },
-      {
-        hari: "Jumat",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "XII RPL 1",
-            ruangan: "R.103",
-            materi: "Ujian Tengah Semester",
-          },
-        ],
-      },
-    ],
+    nama: "Budi Santoso",
+    nip: "19850120 202001 1 001",
+    gender: "L",
+    mapel: ["Matematika", "Fisika"],
   },
   {
     id: 2,
-    namaGuru: "Siti Aminah, S.Kom",
-    nip: "199002202015012004",
-    mataPelajaran: "Pemrograman Web",
-    foto: "https://i.pravatar.cc/150?img=5",
-    jadwal: [
-      {
-        hari: "Senin",
-        sesi: [
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "XI RPL 1",
-            ruangan: "Lab.1",
-            materi: "HTML & CSS",
-          },
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "XII RPL 2",
-            ruangan: "Lab.2",
-            materi: "React.js",
-          },
-        ],
-      },
-      {
-        hari: "Selasa",
-        sesi: [
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "X RPL 1",
-            ruangan: "Lab.1",
-            materi: "Dasar Web",
-          },
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "XI RPL 2",
-            ruangan: "Lab.2",
-            materi: "JavaScript",
-          },
-        ],
-      },
-      {
-        hari: "Rabu",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "XII RPL 1",
-            ruangan: "Lab.1",
-            materi: "Next.js",
-          },
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "X RPL 2",
-            ruangan: "Lab.2",
-            materi: "Bootstrap",
-          },
-        ],
-      },
-      {
-        hari: "Kamis",
-        sesi: [
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "XI RPL 1",
-            ruangan: "Lab.1",
-            materi: "Tailwind CSS",
-          },
-        ],
-      },
-      {
-        hari: "Jumat",
-        sesi: [
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "XII RPL 2",
-            ruangan: "Lab.2",
-            materi: "Project Akhir",
-          },
-        ],
-      },
-    ],
+    nama: "Siti Aminah",
+    nip: "19870214 202002 1 002",
+    gender: "P",
+    mapel: ["Bahasa Indonesia"],
   },
   {
     id: 3,
-    namaGuru: "Ahmad Fauzi, S.T",
-    nip: "198705102012011002",
-    mataPelajaran: "Basis Data",
-    foto: "https://i.pravatar.cc/150?img=33",
-    jadwal: [
-      {
-        hari: "Senin",
-        sesi: [
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "XI RPL 1",
-            ruangan: "Lab.3",
-            materi: "SQL Dasar",
-          },
-        ],
-      },
-      {
-        hari: "Selasa",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "XII RPL 1",
-            ruangan: "Lab.3",
-            materi: "Normalisasi",
-          },
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "XI RPL 2",
-            ruangan: "Lab.3",
-            materi: "ERD",
-          },
-        ],
-      },
-      {
-        hari: "Rabu",
-        sesi: [
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "X RPL 1",
-            ruangan: "Lab.3",
-            materi: "Pengenalan Database",
-          },
-        ],
-      },
-      {
-        hari: "Kamis",
-        sesi: [
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "XII RPL 2",
-            ruangan: "Lab.3",
-            materi: "Stored Procedure",
-          },
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "X RPL 2",
-            ruangan: "Lab.3",
-            materi: "MySQL",
-          },
-        ],
-      },
-      {
-        hari: "Jumat",
-        sesi: [],
-      },
-    ],
+    nama: "Rina Kartika",
+    nip: "19900103 202003 2 003",
+    gender: "P",
+    mapel: ["Biologi", "Kimia"],
   },
   {
     id: 4,
-    namaGuru: "Rina Wulandari, S.Pd",
-    nip: "199208152016012003",
-    mataPelajaran: "Bahasa Inggris",
-    foto: "https://i.pravatar.cc/150?img=9",
-    jadwal: [
-      {
-        hari: "Senin",
-        sesi: [
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "X RPL 1",
-            ruangan: "R.201",
-            materi: "Grammar",
-          },
-        ],
-      },
-      {
-        hari: "Selasa",
-        sesi: [
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "XI RPL 1",
-            ruangan: "R.201",
-            materi: "Reading Comprehension",
-          },
-          {
-            waktu: "10:15 - 11:45",
-            kelas: "XII RPL 1",
-            ruangan: "R.202",
-            materi: "Business English",
-          },
-        ],
-      },
-      {
-        hari: "Rabu",
-        sesi: [
-          {
-            waktu: "07:00 - 08:30",
-            kelas: "X RPL 2",
-            ruangan: "R.201",
-            materi: "Vocabulary",
-          },
-        ],
-      },
-      {
-        hari: "Kamis",
-        sesi: [
-          {
-            waktu: "08:30 - 10:00",
-            kelas: "XI RPL 2",
-            ruangan: "R.201",
-            materi: "Speaking Practice",
-          },
-          {
-            waktu: "13:00 - 14:30",
-            kelas: "XII RPL 2",
-            ruangan: "R.202",
-            materi: "TOEFL Preparation",
-          },
-        ],
-      },
-      {
-        hari: "Jumat",
-        sesi: [],
-      },
-    ],
+    nama: "Ahmad Fauzi",
+    nip: "19790110 201801 1 004",
+    gender: "L",
+    mapel: ["PJOK"],
   },
+  {
+    id: 5,
+    nama: "Dewi Lestari",
+    nip: "19880420 202101 2 005",
+    gender: "P",
+    mapel: ["IPS"],
+  },
+  {
+    id: 6,
+    nama: "Slamet Riyadi",
+    nip: "19750312 201601 1 006",
+    gender: "L",
+    mapel: ["PPKn"],
+  },
+  {
+    id: 7,
+    nama: "Maya Sari",
+    nip: "19931210 202202 2 007",
+    gender: "P",
+    mapel: ["Matematika"],
+  },
+  {
+    id: 8,
+    nama: "Andi Pratama",
+    nip: "19890307 202001 1 008",
+    gender: "L",
+    mapel: ["Bahasa Inggris"],
+  },
+  {
+    id: 9,
+    nama: "Nurhayati",
+    nip: "19801123 202003 2 009",
+    gender: "P",
+    mapel: ["Sejarah"],
+  },
+  {
+    id: 10,
+    nama: "Hendra Wijaya",
+    nip: "19771230 201901 1 010",
+    gender: "L",
+    mapel: ["Seni Budaya"],
+  },
+];
+
+export const jumlahGuru = 24;
+
+export const siswaPerTingkat = [
+  { tingkat: "X", jumlah: 120 },
+  { tingkat: "XI", jumlah: 98 },
+  { tingkat: "XII", jumlah: 110 },
+];
+
+export const siswaPerGender = [
+  { gender: "Laki-laki", jumlah: 180 },
+  { gender: "Perempuan", jumlah: 148 },
+];
+
+export const keuanganSekolah = [
+  { bulan: "Jan", pemasukan: 12000000, pengeluaran: 8000000 },
+  { bulan: "Feb", pemasukan: 15000000, pengeluaran: 9000000 },
+  { bulan: "Mar", pemasukan: 10000000, pengeluaran: 7000000 },
+  { bulan: "Apr", pemasukan: 18000000, pengeluaran: 11000000 },
+];
+
+// --- DATA GURU -----
+export const guruPerGender = [
+  { gender: "Laki-laki", jumlah: 10 },
+  { gender: "Perempuan", jumlah: 14 },
+];
+
+export const totalGuru = guruPerGender.reduce((a, b) => a + b.jumlah, 0);
+export const totalSiswa = siswaPerTingkat.reduce((a, b) => a + b.jumlah, 0);
+
+// --- COMBINED GENDER (guru + siswa) -----
+export const combinedGender = [
+  {
+    gender: "Laki-laki",
+    siswa: siswaPerGender[0].jumlah,
+    guru: guruPerGender[0].jumlah,
+    total: siswaPerGender[0].jumlah + guruPerGender[0].jumlah,
+  },
+  {
+    gender: "Perempuan",
+    siswa: siswaPerGender[1].jumlah,
+    guru: guruPerGender[1].jumlah,
+    total: siswaPerGender[1].jumlah + guruPerGender[1].jumlah,
+  },
+];
+
+// --- ABSENSI (contoh) -----
+export const absensiGuru = [
+  { status: "Hadir", jumlah: 22 },
+  { status: "Izin", jumlah: 1 },
+  { status: "Sakit", jumlah: 1 },
+];
+
+export const absensiSiswa = [
+  { status: "Hadir", jumlah: 380 },
+  { status: "Izin", jumlah: 12 },
+  { status: "Sakit", jumlah: 8 },
+];
+
+// --- NILAI RATA-RATA -----
+export const nilaiRataRata = [
+  { kelas: "V11", nilai: 40 },
+  { kelas: "V111", nilai: 60 },
+  { kelas: "IX", nilai: 80 },
+  { kelas: "X", nilai: 75 },
+  { kelas: "XI", nilai: 67 },
+  { kelas: "XII", nilai: 80 },
 ];

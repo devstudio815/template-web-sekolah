@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components";
-import { DataSidebarGuru } from "@/data/Sidebar";
+import { DataSidebarGuru, DataSidebarKepsek } from "@/data/Sidebar";
 import { Sidebar } from "@/layouts/Sidebar";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -13,7 +13,7 @@ export default function Page({ children }) {
       {/* Sidebar - Fixed Position */}
       <div className="fixed top-0 left-0 h-screen z-40">
         <Sidebar
-          data={DataSidebarGuru}
+          data={DataSidebarKepsek}
           isOpen={isSidebarOpen}
           setIsOpen={setIsSidebarOpen}
         />
@@ -39,7 +39,7 @@ export default function Page({ children }) {
               )}
             </Button>
             <h2 className="ml-4 text-xl font-semibold text-gray-800">
-              Dashboard Guru
+              Dashboard Keapala Sekolah
             </h2>
           </div>
         </header>

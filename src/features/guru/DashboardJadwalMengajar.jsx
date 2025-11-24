@@ -1,30 +1,63 @@
 "use client";
-import { Activity, Calendar, Users } from "lucide-react";
-import { useState } from "react";
-import { JadwalCard } from "./JadwalCard";
-import { hariUrutan, jadwalMapelGuru } from "@/data";
+
+import { ArrowUpDown, ArrowUp, ArrowDown } from "lucide-react";
+import { useState, useMemo } from "react";
+import { jadwalMapelGuru } from "@/data";
 import { Button } from "@/components";
+import { SearchInput } from "@/components";
+import { TableJadwalRow } from "./TableJadwalRow";
 
 export function DashboardJadwalMengajar() {
-  const [selectedDay, setSelectedDay] = useState("Semua");
+  const [search, setSearch] = useState("");
+  const [sortBy, setSortBy] = useState(null);
+  const [sortDir, setSortDir] = useState("none");
 
-  const totalSiswa = jadwalMapelGuru.reduce(
-    (acc, jadwal) =>
-      acc + jadwal.jumlahSiswa.laki_laki + jadwal.jumlahSiswa.perempuan,
-    0,
-  );
+  const toggleSort = (column) => {
+    if (sortBy !== column) {
+      setSortBy(column);
+      setSortDir("asc");
+      return;
+    }
 
-  const totalKelasMingguIni = jadwalMapelGuru.length;
+    setSortDir((prev) =>
+      prev === "asc" ? "desc" : prev === "desc" ? "none" : "asc"
+    );
+  };
 
-  const filteredJadwal =
-    selectedDay === "Semua"
-      ? jadwalMapelGuru
-      : jadwalMapelGuru.filter((j) => j.hari === selectedDay);
+  // controlled icon function
+  const sortIcon = (column) => {
+    if (sortBy !== column) return <ArrowUpDown className="w-4 h-4" />;
+    if (sortDir === "asc") return <ArrowUp className="w-4 h-4" />;
+    if (sortDir === "desc") return <ArrowDown className="w-4 h-4" />;
+    return <ArrowUpDown className="w-4 h-4" />;
+  };
 
-  const jadwalPerHari = hariUrutan.reduce((acc, hari) => {
-    acc[hari] = jadwalMapelGuru.filter((j) => j.hari === hari);
-    return acc;
-  }, {});
+  const filteredAndSorted = useMemo(() => {
+    let data = [...jadwalMapelGuru];
+
+    // SEARCH
+    if (search.trim() !== "") {
+      data = data.filter((j) =>
+        `${j.mapel} ${j.kelas} ${j.hari} ${j.ruangan}`
+          .toLowerCase()
+          .includes(search.toLowerCase())
+      );
+    }
+
+    // SORT
+    if (sortBy && sortDir !== "none") {
+      data.sort((a, b) => {
+        const valA = a[sortBy].toString().toLowerCase();
+        const valB = b[sortBy].toString().toLowerCase();
+
+        if (sortDir === "asc") return valA > valB ? 1 : -1;
+        if (sortDir === "desc") return valA < valB ? 1 : -1;
+        return 0;
+      });
+    }
+
+    return data;
+  }, [search, sortBy, sortDir]);
 
   const getKehadiranPercentage = (kehadiran) => {
     const total = kehadiran.hadir + kehadiran.izin + kehadiran.sakit;
@@ -32,121 +65,86 @@ export function DashboardJadwalMengajar() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-6">
-      <div className="mx-auto">
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-lg p-6 text-white">
-            <div className="flex items-center justify-between mb-4">
-              <Calendar className="w-8 h-8" />
-              <span className="text-2xl font-bold">{totalKelasMingguIni}</span>
-            </div>
-            <h3 className="text-lg font-semibold mb-1">Total Kelas</h3>
-            <p className="text-blue-100 text-sm">Minggu ini</p>
-          </div>
+    <div className="min-h-screen p-6">
+      {/* SEARCH BAR */}
+      <div className="bg-white p-6 rounded-2xl shadow-lg mb-6">
+        <SearchInput value={search} onChange={setSearch} />
+      </div>
 
-          <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl shadow-lg p-6 text-white">
-            <div className="flex items-center justify-between mb-4">
-              <Users className="w-8 h-8" />
-              <span className="text-2xl font-bold">{totalSiswa}</span>
-            </div>
-            <h3 className="text-lg font-semibold mb-1">Total Siswa</h3>
-            <p className="text-purple-100 text-sm">Yang diampu</p>
-          </div>
+      {/* TABLE */}
+      <div className="bg-white rounded-2xl shadow-lg p-6">
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="bg-gray-100 text-sm text-gray-700">
+                <th
+                  className="p-3 text-left cursor-pointer"
+                  onClick={() => toggleSort("mapel")}
+                >
+                  <div className="flex items-center gap-2">
+                    Mapel {sortIcon("mapel")}
+                  </div>
+                </th>
 
-          <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl shadow-lg p-6 text-white">
-            <div className="flex items-center justify-between mb-4">
-              <Activity className="w-8 h-8" />
-              <span className="text-2xl font-bold">92%</span>
+                <th
+                  className="p-3 text-left cursor-pointer"
+                  onClick={() => toggleSort("kelas")}
+                >
+                  <div className="flex items-center gap-2">
+                    Kelas {sortIcon("kelas")}
+                  </div>
+                </th>
+
+                <th
+                  className="p-3 text-left cursor-pointer"
+                  onClick={() => toggleSort("hari")}
+                >
+                  <div className="flex items-center gap-2">
+                    Hari {sortIcon("hari")}
+                  </div>
+                </th>
+
+                <th
+                  className="p-3 text-left cursor-pointer"
+                  onClick={() => toggleSort("jam")}
+                >
+                  <div className="flex items-center gap-2">
+                    Jam {sortIcon("jam")}
+                  </div>
+                </th>
+
+                <th
+                  className="p-3 text-left cursor-pointer"
+                  onClick={() => toggleSort("ruangan")}
+                >
+                  <div className="flex items-center gap-2">
+                    Ruangan {sortIcon("ruangan")}
+                  </div>
+                </th>
+
+                <th className="p-3 text-center">Total Siswa</th>
+                <th className="p-3 text-center">Kehadiran</th>
+                <th className="p-3 text-center">Aksi</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {filteredAndSorted.map((jadwal, index) => (
+                <TableJadwalRow
+                  key={index}
+                  jadwal={jadwal}
+                  getKehadiranPercentage={getKehadiranPercentage}
+                />
+              ))}
+            </tbody>
+          </table>
+
+          {filteredAndSorted.length === 0 && (
+            <div className="text-center py-10 text-gray-500">
+              Tidak ada data ditemukan.
             </div>
-            <h3 className="text-lg font-semibold mb-1">Kehadiran</h3>
-            <p className="text-green-100 text-sm">Rata-rata minggu ini</p>
-          </div>
+          )}
         </div>
-
-        {/* Filter Hari */}
-        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-          <h3 className="text-lg font-bold text-gray-900 mb-4">Filter Hari</h3>
-          <div className="flex flex-wrap gap-3">
-            <Button
-              onClick={() => setSelectedDay("Semua")}
-              className={`px-6 py-2 rounded-xl font-medium transition-all ${
-                selectedDay === "Semua"
-                  ? " text-white shadow-lg"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
-            >
-              Semua Hari
-            </Button>
-            {hariUrutan.map((hari) => (
-              <Button
-                key={hari}
-                onClick={() => setSelectedDay(hari)}
-                className={`px-6 py-2 rounded-xl font-medium transition-all ${
-                  selectedDay === hari
-                    ? " text-white shadow-lg"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                }`}
-              >
-                {hari}
-              </Button>
-            ))}
-          </div>
-        </div>
-
-        {/* Jadwal Cards */}
-        {selectedDay === "Semua" ? (
-          // Tampilan per hari
-          hariUrutan.map((hari) => {
-            const jadwalHari = jadwalPerHari[hari];
-            if (jadwalHari.length === 0) return null;
-
-            return (
-              <div key={hari} className="mb-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-2 h-8 bg-blue-500 rounded-full"></div>
-                  <h2 className="text-2xl font-bold text-gray-900">{hari}</h2>
-                  <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">
-                    {jadwalHari.length} Kelas
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                  {jadwalHari.map((jadwal, index) => (
-                    <JadwalCard
-                      key={index}
-                      jadwal={jadwal}
-                      getKehadiranPercentage={getKehadiranPercentage}
-                    />
-                  ))}
-                </div>
-              </div>
-            );
-          })
-        ) : (
-          // Tampilan filter hari
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            {filteredJadwal.map((jadwal, index) => (
-              <JadwalCard
-                key={index}
-                jadwal={jadwal}
-                getKehadiranPercentage={getKehadiranPercentage}
-              />
-            ))}
-          </div>
-        )}
-
-        {filteredJadwal.length === 0 && selectedDay !== "Semua" && (
-          <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
-            <Calendar className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-600 mb-2">
-              Tidak ada jadwal
-            </h3>
-            <p className="text-gray-500">
-              Tidak ada kelas pada hari {selectedDay}
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );
