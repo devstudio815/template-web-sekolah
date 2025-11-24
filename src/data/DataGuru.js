@@ -317,22 +317,19 @@ export const JadwalGuru = [
   },
 ];
 
-// Utility function untuk filter jadwal hari ini
-export const getJadwalHariIni = (jadwalGuru) => {
-  const hariIni = new Date().toLocaleDateString("id-ID", { weekday: "long" });
-  return jadwalGuru
-    .map((guru) => ({
-      ...guru,
-      jadwal: guru.jadwal.filter((j) => j.hari === hariIni),
-    }))
-    .filter((guru) => guru.jadwal.length > 0);
-};
-
-// Utility function untuk hitung total jam mengajar per minggu
-export const getTotalJamMengajar = (jadwalGuru) => {
-  let totalSesi = 0;
-  jadwalGuru.jadwal.forEach((hari) => {
-    totalSesi += hari.sesi.length;
-  });
-  return totalSesi;
-};
+export const jadwalMapelGuru = [
+  {
+    mapel: "Matematika",
+    kelas: "10 MIA 1",
+    hari: "Senin",
+    jumlahSiswa: {
+      laki_laki: 16,
+      perempuan: 14,
+    },
+    kehadiran: {
+      izin: 5,
+      sakit: 5,
+      hadir: 20,
+    },
+  },
+];
